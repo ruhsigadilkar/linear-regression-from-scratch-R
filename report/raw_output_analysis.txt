@@ -1,0 +1,306 @@
+============================================================
+            REGRESSION ANALYSIS REPORT
+------------------------------------------------------------
+Working Directory: C:/Users/franc/Desktop/UNI/2 - Data science/homework 
+Dataset: Regression2024.csv
+============================================================
+
+
+------------------ A. CORRELATION ANALYSIS ------------------
+
+RStudioGD 
+        2 
+Average absolute correlation (excluding diagonal):
+  →  -0.006 
+
+Maximum correlation:
+Y_X1 
+0.59 
+
+Correlations with absolute value > 0.5:
+Y_X1 
+0.59 
+
+----------------- A. MULTICOLLINEARITY (VIF) ----------------
+
+      X1       X2       X3       X4       X5       X6       X7       X8       X9      X10      X11      X12      X13      X14      X15      X16 
+2.831093 2.517213 2.691456 2.088768 2.658553 1.805484 2.811955 2.205259 1.335312 1.627995 2.125613 2.441609 2.279965 2.670068 1.915200 1.491714 
+     X17      X18      X19      X20      X21      X22      X23      X24      X25      X26      X27      X28      X29      X30 
+1.887237 1.864024 2.188440 1.805136 2.265823 2.313799 2.117836 1.690696 2.232296 2.553338 1.542817 1.926163 2.909464 2.344789 
+Max VIF: 2.91  → X29 
+Min VIF: 1.34  → X9 
+Mean VIF: 2.17 
+Number of variables with VIF > 5: 0 
+
+-------------------- B. OLS ESTIMATION ----------------------
+
+Estimated coefficients (Beta hats):
+           [,1]
+1    -0.1816587
+X1   17.8213068
+X2  -24.3685729
+X3    2.3097667
+X4   -1.1862199
+X5    8.2238334
+X6   -2.3396466
+X7   -0.0526642
+X8   -0.6906964
+X9  -10.4271448
+X10   1.9100863
+X11  16.5876266
+X12  -8.9620741
+X13   0.8435823
+X14   8.7807105
+X15   3.1160911
+X16  21.1179196
+X17  13.4930654
+X18   9.1061938
+X19  -0.1751680
+X20   0.6337111
+X21   0.7835759
+X22  -0.7096599
+X23  -9.7185985
+X24  13.8778779
+X25   2.1579487
+X26  -1.6248726
+X27  -1.9072393
+X28  -7.1755536
+X29  -0.3517663
+X30  20.7284636
+
+P-values of each coefficient:
+      [,1]
+1   0.9129
+X1  0.0000
+X2  0.0000
+X3  0.1783
+X4  0.6501
+X5  0.0003
+X6  0.1342
+X7  0.9818
+X8  0.6673
+X9  0.0000
+X10 0.1939
+X11 0.0000
+X12 0.0002
+X13 0.6286
+X14 0.0002
+X15 0.0594
+X16 0.0000
+X17 0.0000
+X18 0.0000
+X19 0.9369
+X20 0.6986
+X21 0.7045
+X22 0.6838
+X23 0.0000
+X24 0.0000
+X25 0.2416
+X26 0.3446
+X27 0.2003
+X28 0.0023
+X29 0.8829
+X30 0.0000
+
+Mean Squared Error (OLS): 33.7309 
+
+------------------ C. LINEAR MODEL WITH LM ------------------
+
+Coefficients from summary(lm):
+(Intercept)          X1          X2          X3          X4          X5          X6          X7          X8          X9         X10         X11 
+    -0.1817     17.8213    -24.3686      2.3098     -1.1862      8.2238     -2.3396     -0.0527     -0.6907    -10.4271      1.9101     16.5876 
+        X12         X13         X14         X15         X16         X17         X18         X19         X20         X21         X22         X23 
+    -8.9621      0.8436      8.7807      3.1161     21.1179     13.4931      9.1062     -0.1752      0.6337      0.7836     -0.7097     -9.7186 
+        X24         X25         X26         X27         X28         X29         X30 
+    13.8779      2.1579     -1.6249     -1.9072     -7.1756     -0.3518     20.7285 
+
+Do manual and lm() coefficients match? → [1] TRUE
+
+Do manual and lm() p-values match? → [1] TRUE
+
+MSE using lm coefficients: 33.7309 
+
+=================== D. FORWARD SELECTION ====================
+
+[1] "Minimum Cp model:"
+[1] 14
+[1] 49.13738
+Forward Selection - Best model by Cp:
+  → Number of predictors: 14 
+  → Test MSE (Cp): 49.1374 
+
+[1] "Minimum bic model:"
+[1] 49.13738
+Forward Selection - Best model by BIC:
+  → Number of predictors: 14 
+  → Test MSE (BIC): 49.1374 
+
+RStudioGD 
+        2 
+[1] "Best model by 5-fold cross-validation:"
+[1] 13
+[1] 91.42508
+Forward Selection - Best model by Cross-Validation:
+  → Selected model: 13 
+  → Test MSE (CV): 91.4251 
+
+
+================== D. BACKWARD SELECTION ====================
+
+[1] "Minimum Cp model:"
+[1] 14
+[1] 49.13738
+Backward Selection - Best model by Cp:
+  → Number of predictors: 14 
+  → Test MSE (Cp): 49.1374 
+
+RStudioGD 
+        2 
+RStudioGD 
+        2 
+RStudioGD 
+        2 
+[1] "Minimum bic model:"
+[1] 14
+[1] 49.13738
+Backward Selection - Best model by BIC:
+  → Number of predictors: 14 
+  → Test MSE (BIC): 49.1374 
+
+[1] "Modello scelto per 5-fold cross-validation:"
+[1] 12
+RStudioGD 
+        2 
+[1] 107.4766
+Backward Selection - Best model by Cross-Validation:
+  → Selected model: 12 
+  → Test MSE (CV): 107.4766 
+
+
+==================== D. MIXED SELECTION =====================
+
+[1] "Minimum Cp model:"
+[1] 14
+[1] 49.13738
+Mixed Selection - Best model by Cp:
+  → Number of predictors: 14 
+  → Test MSE (Cp): 49.1374 
+
+[1] "Minimum bic model:"
+[1] 49.13738
+Mixed Selection - Best model by BIC:
+  → Number of predictors: 14 
+  → Test MSE (BIC): 49.1374 
+
+ [1] "X1"  "X2"  "X5"  "X9"  "X11" "X12" "X14" "X16" "X17" "X18" "X23" "X24" "X28" "X30"
+[1] "Modello scelto per 5-fold cross-validation:"
+[1] 12
+RStudioGD 
+        2 
+[1] 107.4766
+Mixed Selection - Best model by Cross-Validation:
+  → Selected model: 12 
+  → Test MSE (CV): 107.4766 
+
+
+===================== D. RIDGE REGRESSION =====================
+
+[1] 4.122857
+[1] 80.20202
+Ridge Regression Results:
+  → Optimal lambda: 3.11879 
+  → Test MSE: 80.202 
+
+
+====================== D. LASSO REGRESSION ======================
+
+[1] 0.8283781
+31 x 1 sparse Matrix of class "dgCMatrix"
+                     s0
+(Intercept)   1.0094279
+X1           17.1374791
+X2          -23.2656938
+X3            1.2244371
+X4            .        
+X5            8.1185181
+X6           -1.3170138
+X7            .        
+X8           -0.8446339
+X9           -9.9730201
+X10           0.7050577
+X11          14.8937249
+X12          -6.7243267
+X13           0.3882990
+X14           8.2191710
+X15           1.3910775
+X16          20.5680605
+X17          13.6573942
+X18           8.6629646
+X19          -0.1764671
+X20           .        
+X21           0.7613299
+X22           .        
+X23          -9.4827153
+X24          13.5039057
+X25           1.0358217
+X26          -0.1716833
+X27          -1.0836412
+X28          -7.2396027
+X29           .        
+X30          21.0960675
+[1] 40.18658
+Lasso Regression Results:
+  → Optimal lambda: 0.27126 
+  → Test MSE: 40.1866 
+
+
+====================== CONCLUSIONS ======================
+
+
+================== H. FINAL MODEL COMPARISON ==================
+
+Test MSE for all models:
+ bwd_bic   bwd_cp   bwd_cv  fwd_bic   fwd_cp   fwd_cv  hyb_bic   hyb_cp   hyb_cv    lasso    ridge 
+ 49.1374  49.1374 107.4766  49.1374  49.1374  91.4251  49.1374  49.1374 107.4766  40.1866  80.2020 
+
+Best model based on test MSE:
+  → lasso with MSE = NA 
+
+================== E. FINAL MODEL DETAILS ==================
+
+Significant predictors according to the best model:
+[1] "Lasso è la strategia migliore"
+[1] "Ecco i regressori scelti e i rispettivi coefficienti:"
+31 x 1 sparse Matrix of class "dgCMatrix"
+                      s0
+(Intercept)   0.37518366
+X1           17.11409278
+X2          -23.39687699
+X3            1.43619929
+X4            .         
+X5            7.89848411
+X6           -1.62296182
+X7           -0.86855624
+X8           -0.47340706
+X9          -10.48705999
+X10           1.15393787
+X11          14.21160294
+X12          -7.32243462
+X13           0.04945654
+X14           7.81795586
+X15           2.25629407
+X16          21.27414462
+X17          13.99021854
+X18           8.44653623
+X19          -1.66593973
+X20           0.10907533
+X21           0.07620745
+X22           .         
+X23          -9.79035833
+X24          13.37261822
+X25           0.62799549
+X26          -0.74398068
+X27          -1.87520404
+X28          -7.21907145
+X29           .         
+X30          21.62020681
