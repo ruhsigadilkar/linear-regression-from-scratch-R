@@ -1,5 +1,8 @@
 # 📊 Linear Regression Techniques in R
 
+[![Made with R](https://img.shields.io/badge/Made%20with-R-1f425f.svg)](https://www.r-project.org/)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+
 This project focuses on implementing and comparing various linear regression techniques using R. Developed as part of a graduate-level assignment for the Data Science & Data Analysis course at the University of Salerno, the objective is to identify the best predictive model for a given dataset by minimizing test set error.
 
 > This demonstrates proficiency in R programming, statistical analysis, and reproducible research workflows.
