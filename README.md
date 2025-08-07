@@ -4,6 +4,8 @@ This project focuses on implementing and comparing various linear regression tec
 
 > This demonstrates proficiency in R programming, statistical analysis, and reproducible research workflows.
 
+📂 This project is part of a series of regression analysis case studies. For another similar project, see [regression-model-comparison-R](https://github.com/francescopiocirillo/regression-model-comparison-R).
+
 ## 📌 Objective
 
 Given a dataset with 60 observations and 30 predictors (X1–X30), the goal is to:
