@@ -1,4 +1,4 @@
-# 📊 Linear Regression Techniques in R
+# 📈 Linear Regression Techniques in R
 
 [![Made with R](https://img.shields.io/badge/Made%20with-R-1f425f.svg)](https://www.r-project.org/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
